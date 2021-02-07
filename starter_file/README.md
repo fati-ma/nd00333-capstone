@@ -142,5 +142,7 @@ Then the script will pass the test data to the model as a **POST** request and r
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
+This is the [screen recording](https://drive.google.com/file/d/1l-SsdZaxuax_kXFa4OrNeR-vpDNwJPAk/view?usp=sharing) of the project.
+
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
