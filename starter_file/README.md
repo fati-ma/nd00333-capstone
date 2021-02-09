@@ -217,6 +217,7 @@ The model is successfully deployed as a webservice, a REST endpoint is created, 
 
 ![deploy-2](images/deploy-2.PNG)
 
+
 ## Screen Recording
 The screencast demonstrates:
 - A working model
@@ -224,4 +225,12 @@ The screencast demonstrates:
 - Demo of a sample request sent to the endpoint and its response
 
 This is the [screen recording](https://drive.google.com/file/d/1l-SsdZaxuax_kXFa4OrNeR-vpDNwJPAk/view?usp=sharing) of the project.
+
+
+
+## Future Improvements
+
+- Using another primary metric other than accuracy
+- Using larger dataset
+
 
