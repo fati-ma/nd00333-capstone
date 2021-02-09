@@ -80,12 +80,14 @@ automl_config = AutoMLConfig(
 
 **The models that were trained in AutoML**
 
-![autoMl-models]()
+![autoMl-models](images/automl-models.PNG)
 
 
 **Run Details Widget** 
 
-![run-details]()
+![run-details](images/reu-details-automl.PNG)
+
+![run-details-2](images/run-wait-for-completion-automl.PNG)
 
 
 ### Results
@@ -94,11 +96,14 @@ The best performing model after training using AutoML is `VotingEnsemble` with t
 
 **Best model Metrics and Parameters:**
 
-![best-model]()
+![best-model](images/automl-best-model.PNG)
 
-![best-metrics]()
+![best-model](images/automl-best-model-azml.PNG)
 
-![best-params]()
+
+![best-metrics](images/automl-best-model-metrics.PNG)
+
+![best-params](images/best-model-automl-parameters.PNG)
 
 
 **Improvements for autoML**
@@ -110,7 +115,24 @@ The best performing model after training using AutoML is `VotingEnsemble` with t
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
-![register-model]()
+![completed-run](images/automl-exp-run-completed.PNG)
+
+![best-model-metrics](images/best-model-metrics-notebook-automl.PNG)
+
+![register-best-model](images/register-best-model-automl.PNG)
+
+![register-model](images/register-model-automl.PNG)
+
+![run-metrics](images/run-metrics-azml-automl.PNG)
+
+![run-metrics](images/run-metrics-azml-automl-2.PNG)
+
+![run-metrics](images/run-metrics-azml-automl-3.PNG)
+
+![run-settings](images/run-settings-automl-azml.PNG)
+
+![fitted-final](images/fitted-fina-automl-notebook.PNG)
+
 
 
 ## Hyperparameter Tuning
@@ -130,17 +152,16 @@ In this experimentm the configurations used were `evaluation_interval=2`, `slack
 
 HyperDriveConfig was created by specifying the estimator, hyperparameter_sampling and terrmination policy, primary_metric_name, max_total_runs besides other as shown in the image below:
 
-![config]()
+![config](images/config.PNG)
 
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
 The best accuracy that was achieved by the `Logistic Regression` model is **0.7777777777777778**.
 
 **Parameters** : 
-- Regularization Strength (C)	: 0.6878054492330412
+- Regularization Strength (C) : 0.6878054492330412
 - Max Iterations (max_iter)	: 200
 
 
@@ -148,16 +169,28 @@ The best accuracy that was achieved by the `Logistic Regression` model is **0.77
 - Using different metric other than *Accuracy*
 - Using Bayesian Parameter Sampling instead of Random Sampling.
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 **Screenshots**
 
-![run-details]()
+![run-details](images/run-details-hyper.PNG)
 
-![register-best-model]()
+![completed-run](images/run-wait-for-completion-hyper.PNG)
+
+![register-best-model](images/register-hyper.PNG)
+
+![completed-run](images/hyper-run-completed-details.PNG)
+
+![completed-run](images/hyper-exp-run-completed.PNG)
+
+![completed-run](images/hyper-child-runs.PNG)
+
+![completed-run](images/hyper-best-metrics-params.PNG)
+
+
+
+
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 Since the AutoMl model: `VotingEnsemble` got the highest accuracy, it was the one I chose to deploy.
 
@@ -168,14 +201,28 @@ To download the scoring script ```best_run.download_file('outputs/scoring_file_v
 We will also pass **environment** to *Inference Configuration*
 To download the yml file associated with the environment: ```best_run.download_file('outputs/conda_env_v_1_0_0.yml', 'environment.yml')```
 
+![env-score](images/download-env-files.PNG)
+
+![env-score](images/environment-file-automl.PNG)
+
 The AutoMl model is deployed using Azure Container Instance as a WebService, so for deployment configuration I used ACI and pass it `cpu_cores = 1` and `memory_gb = 1`
 
 To consume the model the test data that was selected from the dataframe is passed and should be converted to JSON
-![json-data]()
+
+![json-data](images/data-json.PNG)
 
 The model is successfully deployed as a webservice, a REST endpoint is created, the status Healthy and we have the scoring uri to test the endpoint and the swagger uri.
 
-![deploy]()
+![swagger-data](images/scoring-uri.PNG)
+
+![results](images/results-deploy.PNG)
+
+![logs](images/logs-deploy.PNG)
+
+
+![deploy-1](images/deploy-1.PNG)
+
+![deploy-2](images/deploy-2.PNG)
 
 ## Screen Recording
 The screencast demonstrates:
