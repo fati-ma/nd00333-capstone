@@ -98,9 +98,6 @@ The best performing model after training using AutoML is `VotingEnsemble` with t
 
 ![best-model](images/automl-best-model.PNG)
 
-![best-model](images/automl-best-model-azml.PNG)
-
-
 ![best-metrics](images/automl-best-model-metrics.PNG)
 
 ![best-params](images/best-model-automl-parameters.PNG)
@@ -113,15 +110,11 @@ The best performing model after training using AutoML is `VotingEnsemble` with t
 
 **Screenshots of AutoML experiment**
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-
 ![completed-run](images/automl-exp-run-completed.PNG)
 
 ![best-model-metrics](images/best-model-metrics-notebook-automl.PNG)
 
 ![register-best-model](images/register-best-model-automl.PNG)
-
-![register-model](images/register-model-automl.PNG)
 
 ![run-metrics](images/run-metrics-azml-automl.PNG)
 
