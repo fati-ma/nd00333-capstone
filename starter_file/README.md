@@ -1,6 +1,6 @@
 # Heart Failure Prediction
 
-In this projects I used the *Heart Failure Prediction* dataset form Kaggle. I used Azure Machine Learning Service and Jupyter Notebook to train models using AutoML and HyperDrive and then by comparing the models performane I deployed the best among them as a HTTP REST endpoint and then tested it by sending a POST request.
+In this projects I used the *Heart Failure Prediction* dataset form Kaggle. I used Azure Machine Learning Service and Jupyter Notebook to train models using AutoML and HyperDrive and then by comparing the models performane I deployed the best among them as a HTTP REST endpoint and then tested it by sending a http request.
 
 ## Dataset
 
@@ -204,7 +204,7 @@ To consume the model the test data that was selected from the dataframe is passe
 
 ![json-data](images/data-json.PNG)
 
-The model is successfully deployed as a webservice, a REST endpoint is created, the status Healthy and we have the scoring uri to test the endpoint and the swagger uri.
+The model is successfully deployed as a webservice, a REST endpoint is created, the state **Healthy** and we have the scoring uri to test the endpoint and the swagger uri.
 
 ![swagger-data](images/scoring-uri.PNG)
 
