@@ -13,8 +13,6 @@ To know further and download/explore the dataset, use this [link](https://www.ka
 Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020)
 
 
-
-
 ### Task
 
 This problem is a ***Classification*** problem, we have to predict either one of the two states (Died during the follow up period/ Still alive), the features I will use to predict mortality by heart failure are explained below:
@@ -45,7 +43,6 @@ I used method `from_delimited_files` of the `TabularDatasetFactory` Class to ret
 Configuration and Settings used for the Automated ML experiment are described below:
 
 ```
-
 automl_settings = {
     "experiment_timeout_minutes": 20,
     "max_concurrent_iterations": 4,
@@ -69,6 +66,7 @@ automl_config = AutoMLConfig(
 | max_concurrent_iterations |   4    |  The max number of iteration that can be executed in parallel   |
 | n_cross_validations      |    3   |  To avoid falling in overfitting  |
 | primary_metric |    'accuracy'   |  The metric that will be optimized for model selection   |
+
 
 
 | Configuration        | Value           | Description  |
